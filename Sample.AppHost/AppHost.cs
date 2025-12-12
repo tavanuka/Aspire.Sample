@@ -26,6 +26,10 @@ var apiService = builder.AddProject<Projects.Sample_ApiService>("apiservice")
 	.WaitFor(coreDb)
     .WithHttpHealthCheck("/health");
 
+// Aspire dashboard customisation
+apiService.MapDisplayTextsForUrls("API")
+    .WithOpenApiUrlEndpoint();
+
 builder.AddProject<Projects.Sample_Web>("webfrontend")
     .WithExternalHttpEndpoints()
     .WithHttpHealthCheck("/health")
