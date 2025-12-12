@@ -4,12 +4,14 @@
   </Folder>
   <Folder Name="/src/">
     <Project Path="Sample.ApiService/Sample.ApiService.csproj" />
-    <Project Path="Sample.Infrastructure/Sample.Infrastructure.csproj" />
     <Project Path="Sample.MigrationWorker/Sample.MigrationWorker.csproj" />
     <Project Path="Sample.ServiceDefaults/Sample.ServiceDefaults.csproj" />
     <Project Path="Sample.Web/Sample.Web.csproj" />
   </Folder>
-  <Folder Name="/src/Infrastructure/" />
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="Sample.Infrastructure/Sample.Infrastructure.csproj" />
+    <Project Path="Sample.Shared/Sample.Shared.csproj" />
+  </Folder>
   <Folder Name="/tests/">
     <Project Path="Sample.AppHost.Tests/Sample.AppHost.Tests.csproj" />
   </Folder>
