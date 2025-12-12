@@ -1,3 +1,4 @@
+using Sample.AppHost.Extensions;
 using Scalar.Aspire;
 
 var builder = DistributedApplication.CreateBuilder(args);
@@ -9,7 +10,8 @@ var postgres = builder.AddPostgres("postgres")
 
 var coreDb = postgres.AddDatabase("core-db");
 
-var cache = builder.AddRedis("cache");
+var cache = builder.AddRedis("cache")
+    .WithClearCommand(); // Custom command that flushes the current cache
 
 
 // Migration service that separates the concern for population of the database and applying migrations.
