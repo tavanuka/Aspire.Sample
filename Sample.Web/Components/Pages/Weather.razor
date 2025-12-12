@@ -1,8 +1,10 @@
 ﻿@page "/weather"
+@using Sample.Shared.Endpoints.WeatherForecast.Responses
+@using Sample.Web.Clients
 @attribute [StreamRendering(true)]
 @attribute [OutputCache(Duration = 5)]
 
-@inject WeatherApiClient WeatherApi
+@inject IWeatherApiClient WeatherApi
 
 <PageTitle>Weather</PageTitle>
 
@@ -40,10 +42,10 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private WeatherForecastResponse[]? forecasts;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await WeatherApi.GetWeatherAsync();
+        forecasts = await WeatherApi.GetWeatherForecast();
     }
 }

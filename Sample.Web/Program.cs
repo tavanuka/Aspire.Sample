@@ -1,5 +1,7 @@
+using Refit;
 using Sample.ServiceDefaults;
 using Sample.Web;
+using Sample.Web.Clients;
 using Sample.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,11 +14,11 @@ builder.AddRedisOutputCache("cache");
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddHttpClient<WeatherApiClient>(client =>
-    {
+builder.Services.AddRefitClient<IWeatherApiClient>()
+    .ConfigureHttpClient(client => {
         // This URL uses "https+http://" to indicate HTTPS is preferred over HTTP.
         // Learn more about service discovery scheme resolution at https://aka.ms/dotnet/sdschemes.
-        client.BaseAddress = new("https+http://apiservice");
+        client.BaseAddress = new("https+http://apiservice/api/weatherforecast");
     });
 
 var app = builder.Build();
