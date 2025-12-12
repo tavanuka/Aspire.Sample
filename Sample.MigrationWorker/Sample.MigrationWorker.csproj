@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-Sample.MigrationWorker-ee56dbc6-162b-4c1e-9069-b01852ff57f9</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="13.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Sample.ServiceDefaults\Sample.ServiceDefaults.csproj" />
+      <ProjectReference Include="..\Sample.Infrastructure\Sample.Infrastructure.csproj" />
+    </ItemGroup>
+</Project>
