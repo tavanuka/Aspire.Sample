@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="Sample.ApiService/Sample.ApiService.csproj" />
+    <Project Path="Sample.Infrastructure/Sample.Infrastructure.csproj" />
+    <Project Path="Sample.MigrationWorker/Sample.MigrationWorker.csproj" />
+    <Project Path="Sample.ServiceDefaults/Sample.ServiceDefaults.csproj" />
+    <Project Path="Sample.Web/Sample.Web.csproj" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/" />
+  <Folder Name="/tests/">
+    <Project Path="Sample.AppHost.Tests/Sample.AppHost.Tests.csproj" />
+  </Folder>
+  <Project Path="Sample.AppHost/Sample.AppHost.csproj" />
+</Solution>
