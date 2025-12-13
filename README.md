@@ -28,18 +28,12 @@ This repository is a demo project created to complement the DevWare GmbH article
    dotnet restore
    ```
 
-3. **(Optional) Install JavaScript dependencies:**
-   ```sh
-   cd path/to/js/project
-   npm install
-   ```
-
-4. **Run the solution:**
+3. **Run the solution:**
    ```sh
    dotnet run --project path/to/your/aspire/project
    ```
 
-5. **Access the Aspire dashboard:**
+4. **Access the Aspire dashboard:**
     - The dashboard will be available at `http://localhost:your-dashboard-port`
 
 ## Usage
