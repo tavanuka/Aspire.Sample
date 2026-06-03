@@ -5,6 +5,6 @@ namespace Sample.Web.Clients;
 
 public interface IWeatherApiClient : IBackendApiClient
 {
-    [Get("api/weatherforecast")]
+    [Get("/api/weatherforecast")]
     Task<WeatherForecastResponse[]> GetWeatherForecast();
 }

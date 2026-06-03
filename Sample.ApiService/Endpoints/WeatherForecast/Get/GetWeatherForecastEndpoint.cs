@@ -9,7 +9,7 @@ public class GetWeatherForecastEndpoint : Ep.NoReq.Res<WeatherForecastResponse[]
     private readonly string[] _summaries = ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
     public override void Configure()
     {
-        Get("weatherforecast");
+        Get("api/weatherforecast");
         AllowAnonymous();
         
         Description(d => d
